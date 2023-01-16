@@ -1,5 +1,14 @@
 #!/bin/bash
 
+OUTPUT_FILE_NAME="clone.sh"
+OUTPUT_FILE_PATH="/home/${USER}/.clone"
+
+mkdir ${OUTPUT_FILE_PATH}/${OUTPUT_FILE_NAME}
+
+curl -o ${OUTPUT_FILE_NAME} https://raw.githubusercontent.com/4lysson-a/clone/main/clone.sh 
+
+mv ${OUTPUT_FILE_NAME} ${OUTPUT_FILE_PATH}/${OUTPUT_FILE_NAME}
+
 # Define o nome do alias
 alias_name="clone"
 
